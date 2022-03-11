@@ -7,7 +7,7 @@ const user = process.env.USER;
 const password = process.env.PASSWORD;
 const url = process.env.URL;
 
-const url = "mongodb+srv://" + user + ":" + password + url;
+const url = "mongodb+srv://" + user + ":" + password + "@" + url;
 
 async function main() {
   // Conexão com o bando de dados
