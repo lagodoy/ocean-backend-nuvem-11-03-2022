@@ -1,8 +1,13 @@
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
-const url = "mongodb+srv://admin:TGciEoS4iV5Dni6k@cluster0.ltxgt.mongodb.net";
-const dbName = "db_nuvem";
+
+const dbName = process.env.DB_NAME;
+const user = process.env.USER;
+const password = process.env.PASSWORD;
+const url = process.env.URL;
+
+const url = "mongodb+srv://" + user + ":" + password + url;
 
 async function main() {
   // Conexão com o bando de dados
